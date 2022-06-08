@@ -1,0 +1,26 @@
+[test.validator]
+url = "devnet"
+
+[[test.validator.clone]]
+address = "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
+[[test.validator.clone]]
+address = "PwDiXFxQsGra4sFFTT8r1QWRMd4vfumiWC1jfWNfdYT"
+
+
+[features]
+seeds = false
+[programs.localnet]
+jmint = "AfY4yQxSqzTJcnt6zkv61tdQq846euCXRzhAAyaN4RJT"
+
+[programs.devnet]
+jmint = "AfY4yQxSqzTJcnt6zkv61tdQq846euCXRzhAAyaN4RJT"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "devnet"
+wallet = "/home/codebind/.config/solana/devnet.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
